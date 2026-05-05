@@ -1,0 +1,17 @@
+# Mac junk
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# API keys — never upload
+.env
+
+# Old versions (keep only latest)
+dashboard_v2.py
+dashboard_v3.py
+Pilot_ESG_foodSMEs.ipynb
