@@ -1,0 +1,10 @@
+streamlit
+pandas
+plotly
+transformers
+torch
+groq
+feedparser
+beautifulsoup4
+requests
+python-dotenv
