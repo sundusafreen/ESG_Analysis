@@ -80,12 +80,13 @@ st.markdown("""
 # ============================================================
 @st.cache_data
 def load_data():
-    try:
-        df = pd.read_csv("final_greenwashing_report.csv")
-        return df
-    except FileNotFoundError:
-        st.error("⚠️ Could not find final_greenwashing_report.csv — make sure it's in the same folder as this script.")
+    import os
+    base     = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(base, "final_greenwashing_report.csv")
+    if not os.path.exists(csv_path):
+        st.error(f"Could not find CSV at: {csv_path}")
         st.stop()
+    return pd.read_csv(csv_path)
 
 df = load_data()
 
