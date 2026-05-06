@@ -303,9 +303,9 @@ if page == "📊 Overview":
 
     styled = df_display.style
     if "Risk Level" in df_display.columns:
-        styled = styled.applymap(colour_risk, subset=["Risk Level"])
+        styled = styled.map(colour_risk, subset=["Risk Level"])
     if "Gap Score"  in df_display.columns:
-        styled = styled.applymap(colour_gap,  subset=["Gap Score"])
+        styled = styled.map(colour_gap,  subset=["Gap Score"])
     styled = styled.format(fmt)
 
     st.dataframe(styled, use_container_width=True, height=600)
